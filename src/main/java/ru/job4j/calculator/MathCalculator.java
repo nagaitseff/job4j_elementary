@@ -23,6 +23,7 @@ public class MathCalculator {
         double sumTwo = sum(difference, divide);
         return sum(sumOne, sumTwo);
     }
+
     public static void main(String[] args) {
         System.out.println("Результат расчета равен: " + sumAndMultiply(10, 20));
         System.out.println("Результат расчета равен: " + sumDifferenceAnaDivide(10, 20));
