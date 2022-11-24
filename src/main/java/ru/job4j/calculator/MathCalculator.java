@@ -9,19 +9,12 @@ public class MathCalculator {
     }
 
     public static double sumDifferenceAnaDivide(double first, double second) {
-        double diff = difference(first, second);
-        double div = divide(first, second);
-        return sum(diff, div);
+        return sum(difference(first, second), divide(first, second));
     }
 
     public static double sumOfFourOperations(double first, double second) {
-        double sum = sum(first, second);
-        double multiply = multiply(first, second);
-        double difference = difference(first, second);
-        double divide = divide(first, second);
-        double sumOne = sum(sum, multiply);
-        double sumTwo = sum(difference, divide);
-        return sum(sumOne, sumTwo);
+        return sum(sum(sum(first, second), multiply(first, second)),
+                sum(difference(first, second), divide(first, second)));
     }
 
     public static void main(String[] args) {
