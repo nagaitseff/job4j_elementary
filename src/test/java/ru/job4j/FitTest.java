@@ -1,7 +1,8 @@
 package ru.job4j;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.within;
 
 public class FitTest {
     @Test
@@ -10,7 +11,7 @@ public class FitTest {
         double expected = 92;
         double out = Fit.manWeight(in);
         double delta = 0.01;
-        Assert.assertEquals(expected, out, delta);
+        assertThat(out).isCloseTo(expected, within(delta));
     }
 
     @Test
@@ -19,6 +20,6 @@ public class FitTest {
         double expected = 69;
         double out = Fit.womanWeight(in);
         double delta = 0.01;
-        Assert.assertEquals(expected, out, delta);
+        assertThat(out).isCloseTo(expected, within(delta));
     }
 }

@@ -1,7 +1,8 @@
 package ru.job4j;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.within;
 
 public class SqAreaTest {
 
@@ -11,7 +12,7 @@ public class SqAreaTest {
         double p = 6;
         double k = 2;
         double out = SqArea.square(p, k);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isCloseTo(expected, within(0.01));
     }
 
     @Test
@@ -20,7 +21,7 @@ public class SqAreaTest {
         double p = 10;
         double k = 2;
         double out = SqArea.square(p, k);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isCloseTo(expected, within(0.01));
     }
 
     @Test
@@ -29,7 +30,7 @@ public class SqAreaTest {
         double p = 0;
         double k = 12;
         double out = SqArea.square(p, k);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isCloseTo(expected, within(0.01));
     }
 
     @Test
@@ -38,6 +39,6 @@ public class SqAreaTest {
         double p = 18;
         double k = 36;
         double out = SqArea.square(p, k);
-        assertEquals(expected, out, 0.01);
+        assertThat(out).isCloseTo(expected, within(0.01));
     }
 }
