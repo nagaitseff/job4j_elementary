@@ -17,7 +17,7 @@ public class SqAreaTest {
 
     @Test
     public void whenP10K7Square2Dot73() {
-        double expected = 2.73;
+        double expected = 5.55;
         double p = 10;
         double k = 2;
         double out = SqArea.square(p, k);
