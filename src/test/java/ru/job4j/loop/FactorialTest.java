@@ -1,8 +1,6 @@
-package ru.job4j;
+package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
-import ru.job4j.loop.Factorial;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FactorialTest {
