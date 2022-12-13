@@ -18,7 +18,7 @@ public class FindLoopTest {
         int[] data = new int[] {1, 3, 7, 15};
         int el = 7;
         int result = FindLoop.indexOf(data, el);
-        int expected = 9;
+        int expected = 2;
         assertThat(result).isEqualTo(expected);
     }
 }
