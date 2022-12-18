@@ -14,11 +14,11 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenArrayHasNot10Then7() {
+    public void whenArrayHasNot10Minus1() {
         int[] data = new int[] {1, 3, 7, 15};
-        int el = 7;
+        int el = 9;
         int result = FindLoop.indexOf(data, el);
-        int expected = 2;
+        int expected = 10;
         assertThat(result).isEqualTo(expected);
     }
 }
